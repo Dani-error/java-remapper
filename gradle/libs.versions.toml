@@ -1,0 +1,13 @@
+[versions]
+teavm = "0.13.0-dev-3"
+asm = "9.8"
+lombok = "1.18.38"
+
+[libraries]
+teavm-core = { group = "org.teavm", name = "teavm-core", version.ref = "teavm" }
+asm = { group = "org.ow2.asm", name = "asm", version.ref = "asm" }
+asm-commons = { group = "org.ow2.asm", name = "asm-commons", version.ref = "asm" }
+lombok = { group = "org.projectlombok", name = "lombok", version.ref = "lombok" }
+
+[plugins]
+teavm = { id = "org.teavm", version.ref = "teavm" }
