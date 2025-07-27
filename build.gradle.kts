@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "dev.dani"
-version = "1.0.0"
+version = "1.0.1"
 
 repositories {
     mavenCentral()
@@ -33,7 +33,7 @@ tasks {
 
         from(
             "README.md", "LICENSE", "remapper.js", "remapper.d.ts",
-            layout.buildDirectory.file("generated/teavm/wasm-gc/remapper.wasm"),
+            layout.buildDirectory.file("generated/teavm/wasm-gc/java-remapper.wasm"),
             "wasm-runtime/runtime.js", "wasm-runtime/wasm-imports-parser.js"
         )
         into("dist")
