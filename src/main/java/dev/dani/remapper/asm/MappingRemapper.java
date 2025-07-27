@@ -24,16 +24,16 @@ public class MappingRemapper extends Remapper {
 
     @Override
     public String map(String internalName) {
-        ClassMapping classMapping = MappingUtil.getClassMapping(mappingSet, internalName.replace('/', '.'));
+        ClassMapping classMapping = MappingUtil.getClassMapping(mappingSet, internalName);
         if (classMapping != null) {
-            return classMapping.deobfuscatedName().replace('.', '/');
+            return classMapping.deobfuscatedName();
         }
         return internalName;
     }
 
     @Override
     public String mapFieldName(String owner, String name, String descriptor) {
-        ClassMapping classMapping = MappingUtil.getClassMapping(mappingSet, owner.replace('/', '.'));
+        ClassMapping classMapping = MappingUtil.getClassMapping(mappingSet, owner);
         if (classMapping != null) {
             FieldMapping field = MappingUtil.getField(classMapping, name);
             if (field != null) {
@@ -45,7 +45,7 @@ public class MappingRemapper extends Remapper {
 
     @Override
     public String mapMethodName(String owner, String name, String descriptor) {
-        ClassMapping classMapping = MappingUtil.getClassMapping(mappingSet, owner.replace('/', '.'));
+        ClassMapping classMapping = MappingUtil.getClassMapping(mappingSet, owner);
         if (classMapping != null) {
             MethodMapping method = MappingUtil.getMethod(classMapping, name, descriptor);
             if (method != null) {
@@ -56,7 +56,7 @@ public class MappingRemapper extends Remapper {
     }
 
     public String mapParameterName(String owner, String methodName, String desc, String currentName) {
-        ClassMapping classMapping = MappingUtil.getClassMapping(mappingSet, owner.replace('/', '.'));
+        ClassMapping classMapping = MappingUtil.getClassMapping(mappingSet, owner);
         if (classMapping != null) {
             MethodMapping method = MappingUtil.getMethod(classMapping, methodName, desc);
             if (method != null) {
@@ -71,7 +71,7 @@ public class MappingRemapper extends Remapper {
     }
 
     public String mapParameterNameByIndex(String owner, String methodName, String desc, String currentName, int index) {
-        ClassMapping classMapping = MappingUtil.getClassMapping(mappingSet, owner.replace('/', '.'));
+        ClassMapping classMapping = MappingUtil.getClassMapping(mappingSet, owner);
         if (classMapping != null) {
             MethodMapping method = MappingUtil.getMethod(classMapping, methodName, desc);
             if (method != null) {
