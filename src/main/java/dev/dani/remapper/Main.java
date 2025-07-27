@@ -1,6 +1,5 @@
 package dev.dani.remapper;
 
-
 import dev.dani.remapper.model.MappingSet;
 import org.teavm.jso.JSExport;
 import org.teavm.jso.core.JSObjects;
