@@ -20,3 +20,8 @@ dependencies {
 
     annotationProcessor(libs.lombok)
 }
+
+teavm.wasmGC {
+    mainClass = "dev.dani.remapper.Main"
+    modularRuntime = true
+}
