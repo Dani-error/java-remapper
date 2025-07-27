@@ -1,5 +1,6 @@
 plugins {
     id("java")
+    alias(libs.plugins.teavm)
 }
 
 group = "dev.dani"
@@ -7,13 +8,15 @@ version = "1.0.0"
 
 repositories {
     mavenCentral()
+    maven("https://teavm.org/maven/repository")
 }
 
 dependencies {
-    testImplementation(platform("org.junit:junit-bom:5.10.0"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
-}
+    implementation(libs.asm)
+    implementation(libs.asm.commons)
 
-tasks.test {
-    useJUnitPlatform()
+    compileOnly(libs.teavm.core)
+    compileOnly(libs.lombok)
+
+    annotationProcessor(libs.lombok)
 }
