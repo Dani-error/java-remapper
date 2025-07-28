@@ -2,6 +2,7 @@
 teavm = "0.13.0-dev-3"
 asm = "9.8"
 lombok = "1.18.38"
+node = "7.0.2"
 
 [libraries]
 teavm-core = { group = "org.teavm", name = "teavm-core", version.ref = "teavm" }
@@ -11,3 +12,4 @@ lombok = { group = "org.projectlombok", name = "lombok", version.ref = "lombok" 
 
 [plugins]
 teavm = { id = "org.teavm", version.ref = "teavm" }
+node = { id = "com.github.node-gradle.node", version.ref = "node" }

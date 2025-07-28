@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    // Language & environment
+    "lib": ["ESNext", "DOM"],
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleDetection": "force",
+    "jsx": "react-jsx",
+    "allowJs": true,
+
+    // Output & module handling
+    "outDir": "../../dist",
+    "declaration": true,
+    "declarationDir": "../../dist",
+    "emitDeclarationOnly": false,
+    "noEmit": false,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "isolatedModules": true,
+
+    // Strictness & safety
+    "strict": true,
+    "skipLibCheck": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+
+    // Lint-style checks (tweak as needed)
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noPropertyAccessFromIndexSignature": false,
+  }
+}
