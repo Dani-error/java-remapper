@@ -91,7 +91,6 @@ export function detectMappingFormat(content: string): MappingFormat | null {
         return MappingFormat.CSRG_TSRG;
     }
 
-    // Default fallback to old TSRG/CSRG
     return null;
 }
 
